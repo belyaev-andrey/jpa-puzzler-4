@@ -13,9 +13,6 @@ public class OwnerService {
     @Autowired
     private OwnerRepository ownerRepository;
 
-    @Autowired
-    private OwnersPrintingService ownersPrintingService;
-
     @Transactional
     public Owner getOwnerOnly(Long id) {
         Owner owner = ownerRepository.findById(id).orElseThrow();
