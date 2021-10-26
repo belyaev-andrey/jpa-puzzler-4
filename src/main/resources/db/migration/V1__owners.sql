@@ -6,6 +6,6 @@ CREATE TABLE owner
 );
 
 INSERT INTO owner (id, name)
-VALUES (1, 'John Doe');
+VALUES (1, 'Jane');
 INSERT INTO owner (id, name)
-VALUES (2, 'Jane Doe');
+VALUES (2, 'John');

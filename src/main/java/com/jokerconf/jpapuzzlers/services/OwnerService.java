@@ -13,6 +13,9 @@ public class OwnerService {
     @Autowired
     private OwnerRepository ownerRepository;
 
+    @Autowired
+    private JpqlService jpqlService;
+
     @Transactional
     public Owner getOwnerOnly(Long id) {
         Owner owner = ownerRepository.findById(id).orElseThrow();
