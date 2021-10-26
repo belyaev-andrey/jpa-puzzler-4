@@ -10,6 +10,6 @@ public interface OwnerRepository extends JpaRepository<Owner, Long> {
 
     @Modifying
     @Query("update Owner o set o.name = :newName where o.id = :id")
-    void renameOwner(@Param("id") Long id, @Param("newName") String newName);
+    int renameOwner(@Param("id") Long id, @Param("newName") String newName);
 
 }
