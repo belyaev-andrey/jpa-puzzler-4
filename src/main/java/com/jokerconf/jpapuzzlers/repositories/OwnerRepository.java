@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 
 public interface OwnerRepository extends JpaRepository<Owner, Long> {
 
-    @Modifying
+    //@Modifying(flushAutomatically = true)
     @Query("update Owner o set o.name = :newName where o.id = :id")
     int renameOwner(@Param("id") Long id, @Param("newName") String newName);
 

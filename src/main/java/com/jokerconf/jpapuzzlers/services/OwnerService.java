@@ -19,6 +19,8 @@ public class OwnerService {
     @Transactional
     public Owner getOwnerOnly(Long id) {
         Owner owner = ownerRepository.findById(id).orElseThrow();
+        //jpqlService.printOwnersWithPets();
+        //jpqlService.renameOwner(id, "Jill");
         return owner;
     }
 

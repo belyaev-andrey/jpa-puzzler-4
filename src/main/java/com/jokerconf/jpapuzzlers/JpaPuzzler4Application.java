@@ -21,6 +21,7 @@ public class JpaPuzzler4Application implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Owner owner = ownerService.getOwnerOnly(1L);
         System.out.println(owner);
+        //owner.getPets().forEach(System.out::println);
         System.out.println();
     }
 }

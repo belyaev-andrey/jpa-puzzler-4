@@ -14,7 +14,8 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
-@NamedQuery(name = "owners-with-pets", query = "select ow from Owner ow left join fetch ow.pets")
+@NamedQuery(name = "owners-with-pets",
+        query = "select ow from Owner ow left join fetch ow.pets")
 public class Owner {
     @Id
     @Column(name = "id", nullable = false)
